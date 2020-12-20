@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  minecraft:
+    container_name: sky-factory-4-server
+    build:
+      context: ./build
+    ports:
+      - 25565:25565
+    volumes:
+      - minecraft-data:/usr/src/app
+
+volumes:
+  minecraft-data:
